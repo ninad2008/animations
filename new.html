@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnace with Smoke</title>
+    <style>
+        body {
+            margin: 0;
+            background: skyblue;
+            overflow: hidden;
+        }
+
+        .furnace-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            margin: 50px auto;
+        }
+
+        .furnace-container svg {
+            display: block;
+        }
+
+        .smoke {
+            position: absolute;
+            bottom: 345px;
+            left: 270px;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(169, 169, 169, 0.8) 0%, rgba(128, 128, 128, 0.4) 50%, transparent 70%);
+            border-radius: 50%;
+            margin-left: -10px;
+            animation: smokeRise 4s linear infinite;
+            pointer-events: none;
+        }
+
+        .smoke:nth-of-type(2) {
+            animation-delay: 0.5s;
+            left: 275px;
+            width: 25px;
+            height: 25px;
+        }
+
+        .smoke:nth-of-type(3) {
+            animation-delay: 1s;
+            left: 275px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .smoke:nth-of-type(4) {
+            animation-delay: 1.5s;
+            left: 278px;
+            width: 22px;
+            height: 22px;
+        }
+
+        .smoke:nth-of-type(5) {
+            animation-delay: 2s;
+            left: 252px;
+            width: 19px;
+            height: 19px;
+        }
+
+        .smoke:nth-of-type(6) {
+            animation-delay: 2.5s;
+            left: 247px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .smoke:nth-of-type(7) {
+            animation-delay: 3s;
+            left: 253px;
+            width: 21px;
+            height: 21px;
+        }
+
+        @keyframes smokeRise {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1) translateX(0);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: translateY(-100px) scale(1.5) translateX(10px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200px) scale(2.5) translateX(30px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="furnace-container">
+        <svg width="400" height="500">
+            <polygon points="160,170 340,170 300,210 100,210" fill="grey" stroke="black" stroke-width="2" />
+            <rect x="100" y="210" width="200" height="250" fill="lightgrey" stroke="black" stroke-width="2" />
+            <rect x="125" y="235" width="150" height="200" fill="darkgrey" stroke="black" stroke-width="2" />
+            <polygon points="160,405 275,405 275,435 125,435" fill="grey" stroke="black" stroke-width="2" />
+            <polygon points="160,405 165,235 125,235 125,435" fill="grey" stroke="black" stroke-width="2" />
+            <polygon points="300,210 340,170 340,430 300,460" fill="grey" stroke="black" stroke-width="2" />
+            <rect x="235" y="150" width="50" height="50" fill="lightgrey" stroke="black" stroke-width="2" />
+            <polygon points="235,150 250,140 300,140 285,150" fill="grey" stroke="black" stroke-width="2" />
+            <polygon points="285,200 285,150 300,140 300,190" fill="grey" stroke="black" stroke-width="2" />
+            <circle cx="140" cy="420" r="10" fill="darkred" stroke="black"/>
+            <circle cx="170" cy="410" r="10" fill="red" stroke="black"/>
+            <circle cx="200" cy="420" r="10" fill="darkred" stroke="black"/>
+            <circle cx="160" cy="420" r="10" fill="red" stroke="black"/>
+            <circle cx="180" cy="410" r="10" fill="darkred" stroke="black"/>
+            <circle cx="210" cy="420" r="10" fill="red" stroke="black"/>
+
+            <circle cx="180" cy="420" r="10" fill="darkred" stroke="black"/>
+            <circle cx="210" cy="410" r="10" fill="red" stroke="black"/>
+            <circle cx="240" cy="420" r="10" fill="darkred" stroke="black"/>
+            <circle cx="200" cy="420" r="10" fill="red" stroke="black"/>
+            <circle cx="220" cy="410" r="10" fill="darkred" stroke="black"/>
+            <circle cx="250" cy="420" r="10" fill="red" stroke="black"/>
+        </svg>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+        <span class="smoke"></span>
+    </div>
+</body>
+
+</html>
